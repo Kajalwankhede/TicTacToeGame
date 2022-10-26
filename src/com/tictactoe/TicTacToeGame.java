@@ -8,7 +8,6 @@ public class TicTacToeGame {
     static int computerScore = 0;
     static Scanner input = new Scanner(System.in);
 
-
             // [0][0] , [0][2] , [0][4]
              //[1][0] , [1][2] , [1][4]
              //[2][0] , [2][2] , [2][4]
@@ -22,8 +21,9 @@ public class TicTacToeGame {
         boolean playAgain = true;
 
         while(playAgain) { //ask to play again once win or tie player got.
+            System.out.println("Welcome to Tic Tac Toe!!");
             while (!gameOver) {
-                System.out.println("Welcome to Tic Tac Toe!!");
+
                 playerMove(gameBoard);
                 gameOver = isGameOver(gameBoard);
                 if (gameOver) {
@@ -233,7 +233,7 @@ public class TicTacToeGame {
     }
 
 
-    public static boolean isGameOver(char [][] gameboard){// Checking if win condion has met is to check all spaces in combination are samw
+    public static boolean isGameOver(char [][] gameboard){// Checking if win condition has met is to check all spaces in combination are samw
 
         //Horizontal Win
         if(gameboard[0][0] == 'X'&& gameboard[0][2] == 'X' && gameboard [0][4] == 'X' ){
